@@ -1,19 +1,14 @@
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
+import base.baseTests;
+import org.testng.annotations.Test;
 
-public class firstTest {
 
-    static void main(String[] args) {
-        try (Playwright playwright = Playwright.create()) {
-
-            Browser browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-
-            Page page = browser.newPage();
-            page.navigate("https://google.com");
-            System.out.println("page title   " + page.title());
-        }
-
+public class firstTest extends baseTests {
+    @Test
+    public void verifyTitle() {
+        page.navigate("https://google.com");
+        System.out.println("page title   " + page.title());
     }
 }
+
+
+
