@@ -1,0 +1,22 @@
+{
+  "name": "playwright-java",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDET-Vinay/Playwright-JAVA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SDET-Vinay/Playwright-JAVA/issues"
+  },
+  "homepage": "https://github.com/SDET-Vinay/Playwright-JAVA#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  }
+}
