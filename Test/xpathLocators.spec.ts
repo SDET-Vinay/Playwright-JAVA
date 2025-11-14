@@ -1,4 +1,4 @@
-import (test, expect, Locator) from '@playwright/test';
+import {test, expect, Locator} from '@playwright/test';
 
 test('xpathLocators', async ({page}) => {
 
@@ -6,18 +6,27 @@ test('xpathLocators', async ({page}) => {
 
     console.log("Webpage launched");
 
-    const usernameField: locator = page.locator("//input[@name , 'username']");
+    const usernameField: locator = page.locator("//input[@name = 'username']");
     await usernameField.fill("student");
     console.log("username entered");
 
-    const passwordField: locator = page.locator("//input[@name, 'password']");
+    const passwordField: locator = page.locator("//input[@name= 'password']");
     await passwordField.fill("Password123");
     console.log("Password Entered");
 
-    const submitButton: locator = page.locator("//button{[@id, 'submit']");
-        submitButton.click();
+    const submitButton: locator = page.locator("//button[@id= 'submit']");
+        await submitButton.click();
         console.log("Submit button pressed ");
 
     page.getByText("Logged in successfully");
         await expect(page.getByText("Logged in successfully")).toBeVisible();
-        }
+
+
+    await page.getByText("Log out").click();
+    console.log("Log Out Button Clicked");
+
+    await expect(submitButton).toBeVisible();
+    console.log("Submit button is visible");
+
+       });
+

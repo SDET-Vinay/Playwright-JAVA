@@ -1,7 +1,0 @@
-<suite name = "Playwright">
-    <test name = "BasicTest">
-        <classes>
-            <class name = "firstTest"/>
-        </classes>
-    </test>
-</suite>
