@@ -8,4 +8,12 @@ test('locators', async ({page}) => {
 
 
     const searchbutton: Locator = await page.getByRole("button", {name: "button"}).click();
+    const searchbutton: Locator = await page.getBy
+
+       const searchbutton: Locator = await page.getByRole("button", {name: "button"}).click();
+
+    const searchbutton: Locator = await page.getByRole("button", {name: "button"}).click();
+    const searchbutton: Locator = await page.getByRole("button", {name: "button"}).click();
+
+
 });
